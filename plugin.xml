@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-locationar" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>LocationAR</name>
+    <description>Cordova Augmented Reality Based on Locations</description>
+	<license>MIT</license>
+	<keywords>cordova, augmented reality based on locations, AR, ar, augmented reality, locations </keywords>
+    <js-module name="LocationAR" src="www/LocationAR.js">
+        <clobbers target="LocationAR" />
+    </js-module>
+    <platform name="ios">
+		<config-file parent="/*" target="config.xml">
+			<feature name="LocationAR">
+				<param name="ios-package" value="LocationAR" />
+			</feature>
+		</config-file>
+		<header-file src="src/ios/LocationAR.h" />
+		<source-file src="src/ios/LocationAR.m" />
+	</platform>
+</plugin>
